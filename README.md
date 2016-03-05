@@ -14,6 +14,26 @@ in lieu of  new Date().toString()
 ```
 Firebase.ServerValue.TIMESTAMP
 ```
+#####7
+add indexes
+```
+"one":{
+  ".indexOn":["name"]
+}
+```
+Add indexs in multi unknown level
+```
+"one":{
+  "$userKey":{
+    ".indexOn":["a","b"]
+  }
+}
+```
+######index orderByValue
+```
+".indexOn":".value"
+```
+
 #####8
 ######anoy auth
 ```
