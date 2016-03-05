@@ -71,3 +71,15 @@ toLowerCase()
 toUpperCase()
 matches()
 ```
+######basic vali (newData is built-in var)
+```
+"two":{
+ ".validate":"newData.isNumber() && newData.val().length<=10"
+}
+```
+######other vali (to prevent other values)
+```
+"$other":{".validate":false}
+```
+
+ 
