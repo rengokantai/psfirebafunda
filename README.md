@@ -14,7 +14,44 @@ in lieu of  new Date().toString()
 ```
 Firebase.ServerValue.TIMESTAMP
 ```
+#####8
+######anoy auth
+```
+var ref = new Firebase(rootlevelpath)
+ref.onAuth(function(authData){
+if(!authData){
+}else{
 
+}
+});
+
+ref.authAnonymously(function(err, authData){
+if(!authData){
+}else{
+
+}
+});
+```
+######auth with email
+```
+ref.authWithPasword({email:'j@j.com',password:'j'},function(err,authData){if(err){console.warn(err)}else{}})
+```
+register a user (log in requires manually add some code)
+```
+ref.createUser({email:'',password:''},function(err,userData){
+  ref.authWithPassword({email:email,password:password},function(err,authData){  //must log in manually
+  }) 
+})
+```
+log out
+```
+ref.unauth()();
+```
+using oauth
+```
+ref.authWithOAuthPopup('twitter',function(err,data){....
+```
+==
 #####9
 ######intro
 default a node read is false(not readable)
