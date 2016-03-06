@@ -14,7 +14,18 @@ in lieu of  new Date().toString()
 ```
 Firebase.ServerValue.TIMESTAMP
 ```
-#####7
+==
+#####5
+######update
+```
+ref.update({count:(user.count||0)+1}, function(err){....
+```
+#####6 querying
+######orderByKey limitToLast
+```
+ref.child('one').limitToLast(3)
+```
+#####7 indexing
 add indexes
 ```
 "one":{
